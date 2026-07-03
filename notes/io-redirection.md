@@ -24,6 +24,4 @@ ls /nonexistent /tmp > both.txt 2>&1
 Order matters here. `> both.txt` first points stdout at the file. Then `2>&1` says "make stderr go wherever stdout is currently going" — i.e., the same file. If you flipped the order (`2>&1 > both.txt`), stderr would bind to wherever stdout was *before* the redirect (likely your terminal), and you'd lose the error output to the screen instead.
 
 
-stdin = 0
-stdout = 1
-stderr = 2
+stdin = 0 stdout = 1 stderr = 2
