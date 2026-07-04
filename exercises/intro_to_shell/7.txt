@@ -1,0 +1,3 @@
+If cd weren't built in, it wouldn't actually changed the current directory due to the nature of child processes.
+
+If cd were a standalone program and you used it, it would be a forked process, as in it's new and working withthe copy of the state, including the directory. All changes made within this process has no way back to the parent process due to OS restrictions.

@@ -1,0 +1,10 @@
+/tmp:
+claude-1000
+mydir
+mydirecho
+serverauth.i8YMNQUnEE
+systemd-private-1b4958835fbd4f12a7ee1df8349d7288-bluetooth.service-VKaVKb
+systemd-private-1b4958835fbd4f12a7ee1df8349d7288-polkit.service-J3jMp8
+systemd-private-1b4958835fbd4f12a7ee1df8349d7288-postgresql.service-1btwwT
+systemd-private-1b4958835fbd4f12a7ee1df8349d7288-systemd-logind.service-MBIYJW
+tmpdo51ejk8
