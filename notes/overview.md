@@ -40,7 +40,7 @@ TAB in bash gives auto-complete - double pressing tab gives all possible options
     - type first few letters than tab to auto complete a path.
 
 
-PATH - A system of variable to value mapping. Metadata: which user am i? etc.
+PATH - Is the colon-separated list of directories the shell searches for commands.
 
 which - shows location of a program
     -a prints all paths
@@ -54,7 +54,7 @@ cat - prints out the contents of a file
 sort - prints out the lines in sorted order. - Alphabetically(lexigraphically).
 
 uniq - only prints out unique lines (only eliminates duplicates that are consecutive)
-    uniq - u (sorts and eliminates duplicates)
+    uniq - u (prints only the lines that are not repeated - it does not sort it only collapses adjacent dupclicates, which is why you sort first)
 
 head - n3 (prints from the start of the file, with n3 the first 3 lines)
 tail - same as head, just from the end of a file

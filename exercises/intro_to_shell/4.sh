@@ -1,4 +1,4 @@
 #!/bin/bash
 Hello="Potato"
 
-echo $'\nHello$!'
+echo $'\n' "$Hello!"

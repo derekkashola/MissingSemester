@@ -1,2 +1,3 @@
-[ -d /tmp/mydir ] || mkdir /tmp/mydir echo$?
+[ -d /tmp/mydir ] || mkdir /tmp/mydir 
+echo $?
 

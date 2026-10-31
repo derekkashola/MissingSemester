@@ -16,7 +16,7 @@
 
 
 
-[ -d mkdir /tmp/mydir ] - shorthand for test, square brackets require a space. returns 0 for true 1 for false.
+[ -d /tmp/mydir ] - shorthand for test, square brackets require a space. returns 0 for true 1 for false.
 
 
 || runs only if the previous command fails
