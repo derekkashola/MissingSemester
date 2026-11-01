@@ -24,7 +24,8 @@ command structure:  program[argument] ex, echo Hello World -> prints Hello World
                                           echo "Hello        World" -> Hello         World
                                           echo  Hello \ \ \ \ World -> Hello         World
 Backslash is an escape character that says "don't treat the next character as special".
- ex. echo 'jons\'s world' -> jon's world
+ ex. echo jon\'s world -> jon's world
+ Backslash does not escape inside single quotes. Use double quotes instead: echo "jon's world" -> jon's world
 
 
 Important commands:
@@ -54,9 +55,9 @@ cat - prints out the contents of a file
 sort - prints out the lines in sorted order. - Alphabetically(lexigraphically).
 
 uniq - only prints out unique lines (only eliminates duplicates that are consecutive)
-    uniq - u (prints only the lines that are not repeated - it does not sort it only collapses adjacent dupclicates, which is why you sort first)
+    uniq -u (prints only the lines that are not repeated - it does not sort it only collapses adjacent dupclicates, which is why you sort first)
 
-head - n3 (prints from the start of the file, with n3 the first 3 lines)
+head -n3 (prints from the start of the file, with n3 the first 3 lines)
 tail - same as head, just from the end of a file
 
 grep - searches inside file, for patterns. 
@@ -75,10 +76,10 @@ glob - a type of pattern, similar to regular expression - a way to write a patte
             * ~ {} / 
 
 
-find - finds files. ex; find ~/Downloads -type f -name "*.zip" -mtime *30 (the *30 is the last 30 days) 
+find - finds files. ex; find ~/Downloads -type f -name "*.zip" -mtime -30 (the -30 is the last 30 days) 
 
-        find [path] ls -lh -> shows permissions and path.
-        find ~ type f -size +100M -exec ls -lh () \; NOTE: -exec takes a command terminated with a 
+        find [path] -ls -> shows permissions and path.
+        find ~ -type f -size +100M -exec ls -lh {} \; NOTE: -exec takes a command terminated with a 
             stand-a-lone ; (which is escaped by a '\') where {} is replaced with each matching file path by
                 find.
 
@@ -104,7 +105,7 @@ awk - has it's own programming language built-in. It parses files. Let's you wri
         ex, awk '{print $2}' data = parses into records as columns. This will print only the second field.
                 In the video white space is the seperator. 
 
-            awk -F, '{print $2}; data : prints the second comma-separated column of every line
+            awk -F, '{print $2}' data : prints the second comma-separated column of every line
 
     Together we can do 'fancy' things like: 
         
@@ -117,13 +118,13 @@ awk - has it's own programming language built-in. It parses files. Let's you wri
             
 
  date > thedate.txt
-    cat the date.txt -> prints current date
+    cat thedate.txt -> prints current date
         > overwrites, >> appends
 
     if grep 2026 thedate.txt; then echo "It's 2026"; fi
         fi ends an if conditional
 
-    while grep 2026 thedate.txt; do echo "it's still 2026; date > thedate.txt; done
+    while grep 2026 thedate.txt; do echo "it's still 2026"; date > thedate.txt; done
 
     for varname in $(seq 1 2 10); do echo "$varname"; done
 

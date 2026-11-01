@@ -21,9 +21,9 @@
 
 || runs only if the previous command fails
 
-&& runs the next command only
+&& runs the next command only if the previous command succeeds
 
-[ -d mkdir /tmp/mydir ] || mkdir /tmp/mydir 
+[ -d /tmp/mydir ] || mkdir /tmp/mydir 
 
 
 
